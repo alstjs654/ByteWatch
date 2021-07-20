@@ -36,9 +36,10 @@ public class drama_servlet extends HttpServlet {
 	 */
 	public void init(ServletConfig config) throws ServletException {
 		Map<String,item_able> temp = new HashMap<>();
-		temp.put("item_detail.drama",new item_detail());
-		temp.put("item_search.it",new item_search());
-		temp.put("item_review.it",new item_review());
+		temp.put("ac_thrill.drama",new item_detail());
+		temp.put("romance.drama",new item_search());
+		temp.put("sitcom.drama",new item_review());
+		temp.put("war_apo.drama");
 	}
 
 	/**

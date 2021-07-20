@@ -19,7 +19,7 @@
                         <div class="label"><label for="id">아이디</label></div>
                         <div class="input">
                             <input id="id" name="id" type="text" minlength="4" maxlength="20"
-                                   placeholder="영문 소문자, 숫자만 사용 가능 (4~20자)" required>
+                                   placeholder="영문 소문자, 숫자만 사용 가능 (4~20자)" required onchange="watchId()">
                         </div>
                         <button class="check-btn" onclick="checkId()">중복확인</button>
                     </div>
@@ -42,7 +42,7 @@
                         <div class="label">닉네임</div>
                         <div class="input">
                             <input id="nickname" name="nickname" type="text" minlength="4" maxlength="16"
-                                   placeholder="특수문자, 기호 사용 불가(4~16byte)" required>
+                                   placeholder="특수문자, 기호 사용 불가(4~16byte)" required onchange="watchNickname()">
                         </div>
                         <button class="check-btn" onclick="checkNickname()">중복확인</button>
                     </div>

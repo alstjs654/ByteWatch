@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-around;
 }
-.login, .join {
+.login, .join, .user-info, .logout {
     text-align: center;
     margin: 0 10px;
 }
@@ -37,4 +37,8 @@
 .login-btn, .logout-btn {
     background-color: #24a6bd;
     border-radius: 10px;
+}
+a {
+    text-decoration: none;
+    color: #d5d5d5;
 }

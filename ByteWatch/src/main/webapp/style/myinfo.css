@@ -1,0 +1,43 @@
+html {
+    font-family: 'Nanum Gothic', 'Malgun Gothic', Roboto, Arial, sans-serif;
+    letter-spacing: 0.015em;
+    background-color: #252525;
+    color: #d5d5d5;
+}
+a {
+    text-decoration: none;
+    color: #d5d5d5;
+}
+#wrap {
+    display: flex;
+    flex-direction: row;
+}
+#leftListArea {
+    width: 250px;
+}
+.info {
+    display: flex;
+}
+.display {
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+}
+.edit-link {
+    padding: 10px;
+    background-color: #24a6bd;
+    border-radius: 5px;
+}
+.modify-area {
+    min-width: 105px;
+}
+.content-header {
+    width: 200px;
+    margin: 50px auto;
+    font-size: 25px;
+}
+.my-info-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
