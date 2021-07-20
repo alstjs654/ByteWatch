@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+
+#box{
+	list-style: none;
+	margin:0px;
+	padding:0px;
+	color:#D5D5D5;
+	
+}
+#home li {
+	text-decoration:none;
+	list-style-type:none;
+	float:left;
+	width:105px;
+}
+
+#search_bar{
+          height:100px;
+          text-align:center;
+}
+
+
+ul li{
+	list-style:none;
+	
+}
+a{
+	text-decoration:none;
+	color:D5D5D5;
+}
+
+#drama_list{
+	height:100px;
+	font-size:19pt;
+	color:D5D5D5;
+	margin:0 auto;
+	text-align:center;
+	border:0px solid black; 
+	
+}
+#drama_list ul{
+	
+	text-decoration:none;
+	list-style-type:none;
+	padding:0;
+	margin:0;
+	width:1800px;
+	height:1200px;
+	
+	
+}
+#drama_list ul> li{
+	text-align:center;
+	line-height:100px;
+	width:300px;
+	float:left;
+	font-size:19pt;
+	color:#D5D5D5;
+	position:relative;
+	
+	
+}
+
+#drama_list > ul > li > ul {
+		width:300px;
+		display:none;
+		position: absolute;
+		font-size:14px;
+		
+}
+	
+#drama_list  > ul > li:hover > ul {
+	display:block;
+	
+}
+	
+#drama_list > ul > li > ul > li:hover {
+	background: #24A6BD ;
+	transition: ease 1s;
+	}
+	

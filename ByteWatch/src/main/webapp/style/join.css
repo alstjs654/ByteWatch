@@ -1,0 +1,91 @@
+html {
+    font-family: 'Nanum Gothic', 'Malgun Gothic', Roboto, Arial, sans-serif;
+    letter-spacing: 0.015em;
+    background-color: #252525;
+    color: #d5d5d5;
+}
+.logo {
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: #d5d5d5;
+}
+#wrap {
+    margin: 0 auto;
+    min-width: 560px;
+    width: 660px;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 20px;
+    background-color: rgba(89,89,89,30%);
+    border-radius: 5px;
+}
+.title {
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 23px;
+}
+#container {
+    margin: 20px auto;
+}
+.label {
+    margin: 0 10px;
+    font-size: 18px;
+    letter-spacing: 0.001em;
+}
+.items {
+    margin: 15px 10px;
+}
+input {
+    border-radius: 4px;
+    border: 1px solid #383838;
+    width: 350px;
+    padding: 15px 20px;
+    margin: 10px;
+    font-size: 18px;
+    background-color: #eaeaea;
+}
+select {
+    width: 100px;
+    height: 50px;
+    padding: 15px;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+    background-color: #eaeaea;
+}
+.check-btn {
+    float: right;
+    margin-right: 10px;
+    min-width: 65px;
+    padding: 5px;
+    font-size: 15px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 25px;
+    background-color: #24a6bdbb;
+}
+.submit-btn {
+    cursor: pointer;
+    width: 200px;
+    height: 60px;
+    border: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 15px;
+    background-color: #24a6bd;
+    margin: 20px auto;
+    float: right;
+    padding: 10px 20px;
+}
+.warning {
+    color: orangered;
+    font-size: 15px;
+    text-align: right;
+    height: 0;
+}

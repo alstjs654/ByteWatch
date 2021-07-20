@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.gallerylist {position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);}
+* {margin:0;padding:0;box-sizing:border-box;} 
+
+
+.gallerylist {max-width:1200px;width:100%;margin:0 auto;}
+.gallerylist > ul {font-size:0;}
+.gallerylist > ul > li {display:inline-block; vertical-align:top; width:33.3%;}
+.gallerylist > ul > li > a {display:block;width:auto;text-decoration: none;margin:5px;}
+.gallerylist > ul > li > a .screen {position:relative;overflow:hidden;}
+.gallerylist > ul > li > a .screen .top {position:absolute;bottom:150%;left:30px;z-index:2;color:#fff;font-size:26px;font-weight:900;transition:all .35s;}
+.gallerylist > ul > li > a .screen .bottom {position:absolute;top:150%;left:30px;z-index:2;color:#fff;font-size:12px;transition:all .35s;}
+.gallerylist > ul > li > a .screen .outline {position:absolute;top:150%;left:30px;z-index:2;color:#fff;font-size:12px;transition:all .35s;}
+.gallerylist > ul > li > a .screen .star {position:absolute;top:150%;left:30px;z-index:2;color:#fff;font-size:12px;transition:all .35s;}
+.gallerylist > ul > li > a .screen .platform{position:absolute;top:150%;left:30px;z-index:2;color:#fff;font-size:12px;transition:all .35s;}
+.gallerylist > ul > li > a .screen img {width:100%;}
+.gallerylist > ul > li > a h3 {font-size:14px;text-align:center;padding:20px;color:#666;}
+.gallerylist > ul > li > a .screen::after {content:'';display:block;position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.5);z-index:1;opacity:0;transition:all .35s;}
+.gallerylist > ul > li > a:hover .top {bottom:52%;}
+.gallerylist > ul > li > a:hover .bottom {top:52%;}
+.gallerylist > ul > li > a:hover .outline {top:60%;}
+.gallerylist > ul > li > a:hover .star {top:68%;}
+.gallerylist > ul > li > a:hover .platform {top:74%;}
+.gallerylist > ul > li > a:hover .screen::after {opacity:1;}
+.main a { font-size:19pt;
+	color:D5D5D5;
+	margin:0 auto;
+	border:0px solid black; 
+	text-decoration:none;
+    cursor: pointer;
+    display:block;
+    text-align:center;
+	line-height:100px;
+	width:300px;
+	float:left;
+}
+ a { text-decoration: none; color: #D5D5D5; }
+    a:visited { text-decoration: none; }
+    a:hover { text-decoration: none; }
+    a:focus { text-decoration: none; }
+    a:hover, a:active { text-decoration: none; background: #24A6BD ; transition: ease 1s;}
+    
