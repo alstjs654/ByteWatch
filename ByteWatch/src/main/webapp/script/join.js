@@ -87,3 +87,13 @@ function checkNickname() {
             "status=no, toolbars=no, scrollbars=no");
     }
 }
+
+function watchId() {
+    var idChecked = document.getElementById("idChecked");
+    idChecked.value = "false";
+}
+
+function watchNickname() {
+    var nicknameChecked = document.getElementById("nicknameChecked");
+    nicknameChecked.value = "false";
+}
