@@ -55,43 +55,6 @@
 </ul>
 </div>
 
-<div class="container">
-  <div class="mySlides">
-    <div class="numbertext">1 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">2 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">3 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">4 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-
-  <div class="mySlides">
-    <div class="numbertext">5 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-    
-  <div class="mySlides">
-    <div class="numbertext">6 / 6</div>
-    <img src="http://placehold.it/500x100" style="width:100%">
-  </div>
-    
-  <a class="prev" onclick="plusSlides(-1)">❮</a>
-  <a class="next" onclick="plusSlides(1)">❯</a>
-
-  <div class="caption-container">
-    <p id="caption"></p>
-  </div>
 <h2>지금 HOT한 드라마</h2>
 
   <div class="row">
@@ -103,19 +66,19 @@
     </c:forEach>
     
     <div class="column">
-      <img class="demo cursor" src='img/bnana.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(2)">
+      <img class="demo cursor" src='drama/img/${dimage.get(10).image }' width="500" height="500" style="width:100%" onclick="currentSlide(2)">
     </div>
     <div class="column">
-      <img class="demo cursor" src='img/crazy.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(3)">
+      <img class="demo cursor" src='drama/img/${dimage.get(2).image }' width="500" height="500" style="width:100%" onclick="currentSlide(3)">
     </div>
     <div class="column">
-      <img class="demo cursor" src='img/sherlock.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(4)">
+      <img class="demo cursor" src='drama/img/${dimage.get(3).image }' width="500" height="500" style="width:100%" onclick="currentSlide(4)">
     </div>
     <div class="column">
-      <img class="demo cursor" src='img/peaky.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(5)">
+      <img class="demo cursor" src='drama/img/${dimage.get(4).image }' width="500" height="500" style="width:100%" onclick="currentSlide(5)">
     </div>    
     <div class="column">
-      <img class="demo cursor" src='img/sthings.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(6)">
+      <img class="demo cursor" src='drama/img/${dimage.get(5).image }' width="500" height="500" style="width:100%" onclick="currentSlide(6)">
     </div>
   </div>
 </div>
