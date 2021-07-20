@@ -22,11 +22,8 @@ a {
     background-color: rgba(89,89,89,30%);
     border-radius: 5px;
 }
-.text-link {
-    padding: 10px;
-}
 .title {
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 30px 0;
     text-align: center;
     font-size: 30px;
@@ -35,7 +32,7 @@ a {
     text-align: center;
     margin: 20px 0;
 }
-#email {
+.input input {
     width: 400px;
     height: 40px;
     font-size: 17px;
@@ -43,9 +40,14 @@ a {
     border: 0;
     border-radius: 5px;
 }
+.label {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    letter-spacing: 0.001em;
+}
 .submit {
-    display: flex;
-    justify-content: space-between;
+    text-align: center;
 }
 .submit-btn {
     cursor: pointer;
@@ -57,16 +59,5 @@ a {
     color: white;
     border-radius: 15px;
     background-color: #24a6bd;
-    margin: 20px auto;
-}
-.login {
-    margin:30px auto;
-    text-align: center;
-}
-.login-btn {
-    padding: 15px;
-    text-decoration: none;
-    color: #d5d5d5;
-    background-color: #24a6bd;
-    border-radius: 10px;
+    margin: 10px auto;
 }

@@ -51,6 +51,9 @@
                                 <div class="input-area">
                                     검색된 아이디는 <b>${foundId}</b> 입니다.
                                 </div>
+                                <div class="login">
+                                    <a href="login.jsp" class="login-btn">로그인</a>
+                                </div>
                             </c:otherwise>
                         </c:choose>
                     </div>

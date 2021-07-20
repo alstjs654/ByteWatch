@@ -21,7 +21,7 @@
             </c:when>
             <c:otherwise>
                 <div class="user-info">
-                    <span class="user-link" onclick="toggleUserView()">${user}님</span>
+                    <a class="user-link" href="myinfo.jsp">${user.nickname} 님</a>
                 </div>
                 <div class="logout">
                     <a href="logout.me" class="logout-btn">로그아웃</a>

@@ -6,11 +6,15 @@
 <head>
 <meta charset="UTF-8">
 <title>내 정보</title>
+<link rel="stylesheet" href="style/myinfo.css">
 </head>
 <body>
 <c:choose>
     <c:when test="${user==null}">
-        <c:redirect url="login.jsp"/>
+        <script type="text/javascript">
+        alert("로그인 하십시오");
+        location.href = "login.jsp";
+        </script>
     </c:when>
     <c:otherwise>
         <div id="wrap">
@@ -38,15 +42,15 @@
             <div class="contents">
                 <div class="name">닉네임</div>
                 <div class="info">
-                    <div class="display">닉네임 표시</div>
-                    <div class="modify-area"><a class="edit-link" href="">닉네임 수정</a></div>
+                    <div class="display">${user.nickname}</div>
+                    <div class="modify-area"><a class="edit-link" href="editNickname.jsp">닉네임 수정</a></div>
                 </div>
             </div>
             <div class="contents">
                 <div class="name">이메일</div>
                 <div class="info">
-                    <div class="display">이메일 표시</div>
-                    <div class="modify-area"><a class="edit-link" href="">이메일 수정</a></div>
+                    <div class="display">${user.email}</div>
+                    <div class="modify-area"><a class="edit-link" href="editEmail.jsp">이메일 수정</a></div>
                 </div>
             </div>
             <div class="contents">
