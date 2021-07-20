@@ -15,6 +15,11 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import drama.drama_able;
+import drama.drama_index;
+import drama.drama_research;
+import drama.drama_search;
+
 
 
 /**
@@ -23,7 +28,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/drama_servlet")
 public class drama_servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private Map<String,MainHandler> map= new HashMap<>();
+	private Map<String,drama_able> map= new HashMap<>();
     /**
      * Default constructor. 
      */
@@ -35,11 +40,10 @@ public class drama_servlet extends HttpServlet {
 	 * @see Servlet#init(ServletConfig)
 	 */
 	public void init(ServletConfig config) throws ServletException {
-		Map<String,item_able> temp = new HashMap<>();
-		temp.put("ac_thrill.drama",new item_detail());
-		temp.put("romance.drama",new item_search());
-		temp.put("sitcom.drama",new item_review());
-		temp.put("war_apo.drama");
+		
+		map.put("drama_index.drama",new drama_index());
+		map.put("drama_research.drama",new drama_research());
+		map.put("drama_search.drama",new drama_search());
 	}
 
 	/**
@@ -62,10 +66,10 @@ public class drama_servlet extends HttpServlet {
 		String path = request.getContextPath();
 		String cmd = url.substring(path.length()+1,url.length());
 		
-		MainHandler hd = map.get(cmd);
+		drama_able dable = map.get(cmd);
 		
 		String view=null;
-		view=hd.action(request, response, cmd.substring(0,cmd.length()-4));
+		view=dable.service(request, response);
 		
 		if(view!=null) {
 			RequestDispatcher disp = request.getRequestDispatcher(view);

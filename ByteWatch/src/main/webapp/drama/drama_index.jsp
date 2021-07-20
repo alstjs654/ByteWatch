@@ -7,7 +7,7 @@
 
 <title>드라마 홈</title>
 
-<link rel='stylesheet' type='text/css' href='drama_index.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:8080/ByteWatch/drama/drama_index.css'>
 
 </head>
 
@@ -95,9 +95,13 @@
 <h2>지금 HOT한 드라마</h2>
 
   <div class="row">
-    <div class="column">
-      <img class="demo cursor" src='img/friends.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
-    </div>
+ <%--   forEach  var="i" begin="0" end="" step="1"  --%>
+  	<c:forEach  var="" items="">
+	    <div class="column">
+	      <img class="demo cursor" src='drama/img/${dimage.get(0).image }' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
+	    </div>
+    </c:forEach>
+    
     <div class="column">
       <img class="demo cursor" src='img/bnana.jpg' width="500" height="500" style="width:100%" onclick="currentSlide(2)">
     </div>

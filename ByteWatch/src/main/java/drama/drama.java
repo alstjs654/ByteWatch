@@ -14,6 +14,12 @@ public class drama {
 	private int episode;
 	private String traliler;
 	
+	public drama(int drama_num, String drama_name,String genre,String image) {
+		this.drama_num=drama_num;
+		this.drama_name=drama_name;
+		this.genre=genre;
+		this.image=image;
+	}
 	public drama(int drama_num, String drama_name, String actor, String country, String genre, 
 			String image, String detail, String platform, String season,int episode, String traliler){
 		

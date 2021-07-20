@@ -12,9 +12,6 @@
   
   <servlet>
 
-  	<servlet-name>dramaControl</servlet-name>
-  	<servlet-class>drama.dramaControl</servlet-class>
-
   	<servlet-name>pool</servlet-name>
   	<servlet-class>main.ConnectionPool</servlet-class>
   	<load-on-startup>1</load-on-startup>
@@ -22,10 +19,10 @@
   
   <servlet>
   	<servlet-name>table</servlet-name>
-  	<servlet-class>drama.table</servlet-class>
+  	<servlet-class>main.drama_servlet</servlet-class>
   </servlet>
   <servlet-mapping>
-   <servlet-name>dramaControl</servlet-name>
+   <servlet-name>table</servlet-name>
    <url-pattern>*.drama</url-pattern>
   </servlet-mapping>
   
