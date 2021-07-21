@@ -9,11 +9,10 @@ a {
     color: #d5d5d5;
 }
 #wrap {
+    width: 700px;
     display: flex;
     flex-direction: row;
-}
-#leftListArea {
-    width: 250px;
+    margin: 0 auto;
 }
 .info {
     display: flex;
@@ -23,13 +22,20 @@ a {
     height: 120px;
     padding: 10px;
 }
+.left-list-area {
+    width: 250px;
+}
+.list-area {
+    width: 100%;
+    text-align: center;
+}
 .edit-link {
     padding: 10px;
     background-color: #24a6bd;
     border-radius: 5px;
 }
 .modify-area {
-    min-width: 105px;
+    width: 110px;
 }
 .content-header {
     width: 200px;
