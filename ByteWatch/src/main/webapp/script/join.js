@@ -59,7 +59,7 @@ function checkId() {
 
     if (id.value != "") {
         var uri = "checkId.me?query=" + id.value;
-        window.open(uri, "중복확인", "width=1, height=1, top=100, left=300, location=no," +
+        window.open(uri, "중복확인", "width=1, height=1, top=1, left=1, location=no," +
             "status=no, toolbars=no, scrollbars=no");
     }
 }
@@ -83,7 +83,7 @@ function checkNickname() {
 
     if (nickname.value != "") {
         var uri = "checkNickname.me?query=" + nickname.value;
-        window.open(uri, "중복확인", "width=1, height=1, top=100, left=300, location=no," +
+        window.open(uri, "중복확인", "width=1, height=1, top=1, left=1, location=no," +
             "status=no, toolbars=no, scrollbars=no");
     }
 }
