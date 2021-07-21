@@ -5,18 +5,18 @@ import java.util.ArrayList;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class drama_index implements drama_able{
+public class drama_detail implements drama_able{
 
 	@Override
 	public String service (HttpServletRequest request, HttpServletResponse response) {
 		
-		String view = null;
+		int num = Integer.parseInt(request.getParameter("num"));
 		
 		drama_dao ddao = new drama_dao();
-		ArrayList<drama>dlist=ddao.index_select();
-		System.out.println("aaa");
-		request.setAttribute("dimage", dlist);
+		drama data = ddao.select(num);
 		
-		return "drama/drama_index.jsp";
+		request.setAttribute("drama", data);
+		
+		return "drama/drama_detail.jsp";
 	}
 }

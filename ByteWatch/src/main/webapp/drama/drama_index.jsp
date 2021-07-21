@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,27 +60,13 @@
 
   <div class="row">
  <%--   forEach  var="i" begin="0" end="" step="1"  --%>
-  	<c:forEach  var="" items="">
+  	<c:forEach  var="i" items="${dimage }">
 	    <div class="column">
-	      <img class="demo cursor" src='drama/img/${dimage.get(0).image }' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
+	     <a href="drama_detail.drama?num=${i.drama_num }"> <img class="demo cursor" src='drama/img/${i.image}' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
+	    	</a>
 	    </div>
     </c:forEach>
     
-    <div class="column">
-      <img class="demo cursor" src='drama/img/${dimage.get(10).image }' width="500" height="500" style="width:100%" onclick="currentSlide(2)">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src='drama/img/${dimage.get(2).image }' width="500" height="500" style="width:100%" onclick="currentSlide(3)">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src='drama/img/${dimage.get(3).image }' width="500" height="500" style="width:100%" onclick="currentSlide(4)">
-    </div>
-    <div class="column">
-      <img class="demo cursor" src='drama/img/${dimage.get(4).image }' width="500" height="500" style="width:100%" onclick="currentSlide(5)">
-    </div>    
-    <div class="column">
-      <img class="demo cursor" src='drama/img/${dimage.get(5).image }' width="500" height="500" style="width:100%" onclick="currentSlide(6)">
-    </div>
   </div>
 </div>
 

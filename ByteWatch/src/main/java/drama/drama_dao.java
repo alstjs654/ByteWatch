@@ -10,11 +10,11 @@ public class drama_dao extends MainDAO{
 	ArrayList<drama> list = new ArrayList<>();
 	
 	String sql = "select * from drama order by w_cnt desc";
-	
+	System.out.println("bbb");
 	try {
 		ps=conn.prepareStatement(sql);
 		rs = ps.executeQuery();
-		for(int i=0; i<15 && rs.next(); i++) {
+		for(int i=0; i<18 && rs.next(); i++) {
 			
 			drama data = new drama(
 		rs.getInt(1),rs.getString(2),rs.getString(5),rs.getString(6)
@@ -24,6 +24,7 @@ public class drama_dao extends MainDAO{
 		rs.close();
 		ps.close();
 		conn.close();
+		
 	}catch(SQLException e) {
 		e.printStackTrace();
 		System.out.println("드라마 조회 실패");
@@ -31,4 +32,12 @@ public class drama_dao extends MainDAO{
 	return list;
 }
 
-}
+
+	public drama select(int num) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	}
+

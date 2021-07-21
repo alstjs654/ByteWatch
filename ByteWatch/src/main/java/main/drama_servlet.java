@@ -16,6 +16,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import drama.drama_able;
+import drama.drama_detail;
 import drama.drama_index;
 import drama.drama_research;
 import drama.drama_search;
@@ -44,6 +45,7 @@ public class drama_servlet extends HttpServlet {
 		map.put("drama_index.drama",new drama_index());
 		map.put("drama_research.drama",new drama_research());
 		map.put("drama_search.drama",new drama_search());
+		map.put("drama_detail.drama",new drama_detail());
 	}
 
 	/**
@@ -65,7 +67,7 @@ public class drama_servlet extends HttpServlet {
 		String url = request.getRequestURI();
 		String path = request.getContextPath();
 		String cmd = url.substring(path.length()+1,url.length());
-		
+	
 		drama_able dable = map.get(cmd);
 		
 		String view=null;
