@@ -147,7 +147,7 @@ public class MemberService {
 		try {
 			Member user = memberDAO.getMemberById(id);
 			request.getSession().setAttribute("user", user);
-			response.sendRedirect("login.jsp");
+			response.sendRedirect("index.jsp");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
