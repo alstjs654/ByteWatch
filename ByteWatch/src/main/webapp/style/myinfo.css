@@ -41,9 +41,6 @@ a {
     height: 150px;
     text-align: center;
 }
-.list-area:hover {
-    background-color: #eeeeee;
-}
 .list-area > a {
     font-size: 21px;
     padding: 40px;
