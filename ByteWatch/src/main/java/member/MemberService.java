@@ -1,16 +1,21 @@
 package member;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
+import drama.*;
 
 public class MemberService {
 
 	public String action(HttpServletRequest request, HttpServletResponse response, String cmd) {
 		switch (cmd) {
+		case "index.me":
+			index(request, response);
+			return "index.jsp";
 		case "login.me":
 			login(request, response);
 			break;
@@ -34,10 +39,10 @@ public class MemberService {
 			return "findpw.jsp";
 		case "editNickname.me":
 			editNickname(request, response);
-			return "myinfo.jsp";
+			break;
 		case "editEmail.me":
 			editEmail(request, response);
-			return "myinfo.jsp";
+			break;
 		case "changePw.me":
 			changePassword(request, response);
 			break;
@@ -46,6 +51,12 @@ public class MemberService {
 			break;
 		}
 		return null;
+	}
+
+	private void index(HttpServletRequest request, HttpServletResponse response) {
+		drama_dao dramaDao = new drama_dao();
+		ArrayList<drama> dramaList = dramaDao.index_select();
+		request.setAttribute("dramaList", dramaList);
 	}
 
 	private void deleteAccount(HttpServletRequest request, HttpServletResponse response) {
@@ -69,6 +80,11 @@ public class MemberService {
 		MemberDAO memberDAO = new MemberDAO();
 		memberDAO.update("pw", newPw, "id", currentMember.getId());
 		request.getSession().removeAttribute("user");
+		try {
+			response.sendRedirect("login.jsp");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void editEmail(HttpServletRequest request, HttpServletResponse response) {
@@ -78,10 +94,15 @@ public class MemberService {
 		MemberDAO memberDAO = new MemberDAO();
 		memberDAO.update("email", newEmail, "email", oldEmail);
 		
-		Member member = (Member) request.getSession().getAttribute("user");
-		member = memberDAO.getMemberById(member.getId());
+		Member temp = (Member) request.getSession().getAttribute("user");
+		Member member = memberDAO.getMemberById(temp.getId());
 		request.getSession().removeAttribute("user");
 		request.getSession().setAttribute("user", member);
+		try {
+			response.sendRedirect("myinfo.jsp");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void editNickname(HttpServletRequest request, HttpServletResponse response) {
@@ -89,11 +110,17 @@ public class MemberService {
 		String oldNickname = request.getParameter("oldNickname");
 		
 		MemberDAO memberDAO = new MemberDAO();
-		memberDAO.update("nickname",newNickname, "email", oldNickname);
+		memberDAO.update("nickname", newNickname, "nickname", oldNickname);
 		
 		Member member = memberDAO.getMemberByNickname(newNickname);
 		request.getSession().removeAttribute("user");
 		request.getSession().setAttribute("user", member);
+		
+		try {
+			response.sendRedirect("myinfo.jsp");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void findPw(HttpServletRequest request, HttpServletResponse response) {

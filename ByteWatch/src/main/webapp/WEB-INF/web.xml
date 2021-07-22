@@ -16,7 +16,19 @@
   	<servlet-class>main.ConnectionPool</servlet-class>
   	<load-on-startup>1</load-on-startup>
   </servlet>
+   <servlet>
+  	<servlet-name>MVControl</servlet-name>
+  	<servlet-class>movie.mv_C</servlet-class>
+  	<init-param>
+  		<param-name>config</param-name>
+  		<param-value>C:\Users\USER-506\git\ByteWatch\ByteWatch\src\main\webapp\WEB-INF\mv.properties</param-value>
+  	</init-param>
+  </servlet>
   
+  <servlet-mapping>
+  	<servlet-name>MVControl</servlet-name>
+  	<url-pattern>*.mv</url-pattern>
+  </servlet-mapping>
   <servlet>
   	<servlet-name>table</servlet-name>
   	<servlet-class>main.drama_servlet</servlet-class>

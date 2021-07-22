@@ -21,7 +21,7 @@
                             <input id="id" name="id" type="text" minlength="4" maxlength="20"
                                    placeholder="영문 소문자, 숫자만 사용 가능 (4~20자)" required onchange="watchId()">
                         </div>
-                        <button type="button" class="check-btn" onclick="checkId()">중복확인</button>
+                        <button class="check-btn" onclick="checkId()">중복확인</button>
                     </div>
                     <div class="items">
                         <div class="label"><label for="pw">비밀번호</label></div>
@@ -44,7 +44,7 @@
                             <input id="nickname" name="nickname" type="text" minlength="4" maxlength="16"
                                    placeholder="특수문자, 기호 사용 불가(4~16byte)" required onchange="watchNickname()">
                         </div>
-                        <button type="button" class="check-btn" onclick="checkNickname()">중복확인</button>
+                        <button class="check-btn" onclick="checkNickname()">중복확인</button>
                     </div>
                     <div class="items">
                         <div class="label"><label for="email">이메일</label></div>
