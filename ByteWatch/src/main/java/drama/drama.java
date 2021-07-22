@@ -12,7 +12,7 @@ public class drama {
 	private String platform;
 	private String season;
 	private int episode;
-	private String traliler;
+	private String trailer;
 	
 	public drama(int drama_num, String drama_name,String genre,String image) {
 		this.drama_num=drama_num;
@@ -21,7 +21,7 @@ public class drama {
 		this.image=image;
 	}
 	public drama(int drama_num, String drama_name, String actor, String country, String genre, 
-			String image, String detail, String platform, String season,int episode, String traliler){
+			String image, String detail, String platform, String season,int episode, String trailer){
 		
 		this.drama_num=drama_num;
 		this.drama_name=drama_name;
@@ -33,7 +33,7 @@ public class drama {
 		this.platform=platform;
 		this.season=season;
 		this.episode=episode;
-		this.traliler=traliler;
+		this.trailer=trailer;
 		
 	}
 
@@ -117,12 +117,12 @@ public class drama {
 		this.episode = episode;
 	}
 
-	public String getTraliler() {
-		return traliler;
+	public String getTrailer() {
+		return trailer;
 	}
 
-	public void setTraliler(String traliler) {
-		this.traliler = traliler;
+	public void setTrailer(String trailer) {
+		this.trailer = trailer;
 	}
 }
 

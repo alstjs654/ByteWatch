@@ -51,7 +51,7 @@
 <div id = 'menu'>
 <ul>
 <li><a href='drama_index.drama'>드라마 홈</a></li>
-<li><a href='drama_list.jsp'>드라마 탐색</a></li>
+<li><a href='drama_research.drama'>드라마 탐색</a></li>
 <li><input type='text' name='search_name'><button>검색</button></li>
 </ul>
 </div>

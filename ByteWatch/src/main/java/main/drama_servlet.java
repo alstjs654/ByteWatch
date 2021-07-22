@@ -20,6 +20,7 @@ import drama.drama_detail;
 import drama.drama_index;
 import drama.drama_research;
 import drama.drama_search;
+import drama.drama_watching;
 
 
 
@@ -46,6 +47,7 @@ public class drama_servlet extends HttpServlet {
 		map.put("drama_research.drama",new drama_research());
 		map.put("drama_search.drama",new drama_search());
 		map.put("drama_detail.drama",new drama_detail());
+		map.put("watching_list.drama",new drama_watching());
 	}
 
 	/**

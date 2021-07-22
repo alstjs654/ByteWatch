@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
-<link rel='stylesheet' type='text/css' href='wc_list.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:8080/ByteWatch/drama/wc_list.css'>
 </head>
 
 <body bgcolor="#252525">

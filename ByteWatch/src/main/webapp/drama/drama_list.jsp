@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>드라마 탐색</title>
 </head>
-<link rel='stylesheet' type='text/css' href='drama_list.css'>
+<link rel='stylesheet' type='text/css' href='http://localhost:8080/ByteWatch/drama/drama_list.css'>
 <style>
     a { text-decoration: none; color: #D5D5D5; }
     a:visited { text-decoration: none; }
@@ -36,7 +36,7 @@
 <ul id='home'>
   <li><a href="../index.html">홈</a></li>
   <li><a href="../movie.html">영화 홈</a></li>
-  <li><a href="drama_index.jsp">드라마 홈</a></li>
+  <li><a href="drama_index.drama">드라마 홈</a></li>
 </ul>
 
 </div>
@@ -66,7 +66,7 @@
        <li><a href="#">기타</a></li>
    </ul>
   </li>
-<li><a href="watching_list.jsp">시청 목록</a></li>
+<li><a href="watching_list.drama">시청 목록</a></li>
     <li><input type='text' name='search_name'><button>검색</button></li>
 </div>
 </ul>

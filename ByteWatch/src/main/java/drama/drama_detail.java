@@ -15,6 +15,7 @@ public class drama_detail implements drama_able{
 		drama_dao ddao = new drama_dao();
 		drama data = ddao.select(num);
 		
+	
 		request.setAttribute("drama", data);
 		
 		return "drama/drama_detail.jsp";

@@ -34,7 +34,24 @@ public class drama_dao extends MainDAO{
 
 
 	public drama select(int num) {
-		// TODO Auto-generated method stub
+		String sql = "select * from drama where drama_num=?";
+		
+		try {
+			ps=conn.prepareStatement(sql);
+			ps.setInt(1, num);
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				drama data = new drama(
+	rs.getInt(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),
+	rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getInt(10),
+	rs.getString(11)
+						);
+						return data;
+			}
+		}catch(SQLException e) {
+			
+		}
+		
 		return null;
 	}
 
