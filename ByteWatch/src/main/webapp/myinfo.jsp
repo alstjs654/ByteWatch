@@ -19,7 +19,7 @@
     <c:otherwise>
         <div id="wrap">
     <div id="leftListArea" class="left-list-area">
-        <div class="logo"><a href="index.html">로고</a></div>
+        <div class="logo"><a href="index.me">로고</a></div>
         <div class="list-area">
             <ul class="my-info-list">
                 <li>

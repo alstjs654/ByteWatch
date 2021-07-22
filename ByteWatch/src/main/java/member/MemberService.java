@@ -1,16 +1,21 @@
 package member;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.servlet.jsp.PageContext;
+import drama.*;
 
 public class MemberService {
 
 	public String action(HttpServletRequest request, HttpServletResponse response, String cmd) {
 		switch (cmd) {
+		case "index.me":
+			index(request, response);
+			return "index.jsp";
 		case "login.me":
 			login(request, response);
 			break;
@@ -46,6 +51,12 @@ public class MemberService {
 			break;
 		}
 		return null;
+	}
+
+	private void index(HttpServletRequest request, HttpServletResponse response) {
+		drama_dao dramaDao = new drama_dao();
+		ArrayList<drama> dramaList = dramaDao.index_select();
+		request.setAttribute("dramaList", dramaList);
 	}
 
 	private void deleteAccount(HttpServletRequest request, HttpServletResponse response) {
