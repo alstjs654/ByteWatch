@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+ 
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,27 +46,27 @@
 
 <div id='drama_list'>
 <ul>
-<li><a href="#">모든 장르</a>
+<li><a href="drama_research.drama">모든 장르</a>
    <ul> 
-       <li><a href="#">액션/스릴러</a></li> 
-       <li><a href="#">로맨스</a></li> 
-       <li><a href="#">시트콤</a></li> 
-       <li><a href="#">전쟁/아포칼립스</a></li>
-       <li><a href="#">공포/호러</a></li>
-       <li><a href="#">판타지/SF</a></li>
-       <li><a href="#">추리/범죄</a></li>
-       <li><a href="#">시대물</a></li>
-       <li><a href="#">의학</a></li>
-       <li><a href="#">기타</a></li> 
+       <li><a href="drama_research.drama?part=g&ct=액션,스릴러">액션/스릴러</a></li> 
+       <li><a href="drama_research.drama?part=g&ct=로맨스">로맨스</a></li> 
+       <li><a href="drama_research.drama?part=g&ct=시트콤">시트콤</a></li> 
+       <li><a href="drama_research.drama?part=g&ct=전쟁,아포칼립스">전쟁/아포칼립스</a></li>
+       <li><a href="drama_research.drama?part=g&ct=공포,호러">공포/호러</a></li>
+       <li><a href="drama_research.drama?part=g&ct=판타지,sf">판타지/SF</a></li>
+       <li><a href="drama_research.drama?part=g&ct=추리,범죄">추리/범죄</a></li>
+       <li><a href="drama_research.drama?part=g&ct=시대물">시대물</a></li>
+       <li><a href="drama_research.drama?part=g&ct=의학">의학</a></li>
+       <li><a href="drama_research.drama?part=g&ct=드라마">드라마</a></li> 
   </ul>
 </li>
-<li><a href="#">국가</a>
+<li><a href="drama_research.drama">국가</a>
    <ul>
-       <li><a href="#">한국</a></li>
-       <li><a href="#">미국</a></li>
-       <li><a href="#">영국</a></li>
-       <li><a href="#">아시아</a></li>
-       <li><a href="#">기타</a></li>
+       <li><a href="drama_research.drama?part=c&ct=한국">한국</a></li>
+       <li><a href="drama_research.drama?part=c&ct=미국">미국</a></li>
+       <li><a href="drama_research.drama?part=c&ct=영국">영국</a></li>
+       <li><a href="drama_research.drama?part=c&ct=아시아">아시아</a></li>
+       <li><a href="drama_research.drama?part=c&ct=기타">기타</a></li>
    </ul>
   </li>
 <li><a href="watching_list.drama">시청 목록</a></li>
@@ -74,6 +77,13 @@
 
 </div>
 </div>
-
+<div class="row">
+	<c:forEach  var="i" items="${drama }">
+	    <div class="column">
+	     <a href="drama_detail.drama?num=${i.drama_num }&genre=${i.genre}"> <img class="demo cursor" src='drama/img/${i.image}' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
+	    	</a>
+	    </div>
+    </c:forEach>
+</div>
 </body>
 </html>

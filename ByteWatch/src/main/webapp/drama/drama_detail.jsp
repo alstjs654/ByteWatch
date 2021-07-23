@@ -45,9 +45,11 @@
 </div>
 <div id='similar_drama'>
 <p>추천 드라마</p>
+	<c:forEach  var="i" items="${dramaAB }">
  <div class='similar_dm'>
-   <img class="drama_img" src='drama/img/${drama.image }' width="300" height="300">
+   <img class="drama_img" src='drama/img/${i.image }' width="300" height="300">
  </div>
+ </c:forEach>
 </div>
 
 

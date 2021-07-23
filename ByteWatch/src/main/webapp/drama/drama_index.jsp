@@ -62,7 +62,7 @@
  <%--   forEach  var="i" begin="0" end="" step="1"  --%>
   	<c:forEach  var="i" items="${dimage }">
 	    <div class="column">
-	     <a href="drama_detail.drama?num=${i.drama_num }"> <img class="demo cursor" src='drama/img/${i.image}' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
+	     <a href="drama_detail.drama?num=${i.drama_num }&genre=${i.genre}"> <img class="demo cursor" src='drama/img/${i.image}' width="500" height="500" style="width:100%" onclick="currentSlide(1)" >
 	    	</a>
 	    </div>
     </c:forEach>

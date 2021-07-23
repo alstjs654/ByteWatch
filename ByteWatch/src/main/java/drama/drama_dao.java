@@ -54,7 +54,32 @@ public class drama_dao extends MainDAO{
 		
 		return null;
 	}
-
-
+	
+	public ArrayList<drama>selectAB(String s,int cnt){
+		ArrayList<drama> list = new ArrayList<>();
+		
+		String sql = "select * from drama "+s;
+		System.out.println("bbb");
+		try {
+			ps=conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			for(int i=0; i<cnt && rs.next(); i++) {
+				
+				drama data = new drama(
+			rs.getInt(1),rs.getString(2),rs.getString(5),rs.getString(6)
+						);
+				list.add(data);
+			}
+			rs.close();
+			ps.close();
+			conn.close();
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+			System.out.println("드라마 조회 실패");
+		}
+		return list;
+	}
+	
 	}
 
